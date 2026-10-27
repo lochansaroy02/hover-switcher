@@ -255,7 +255,8 @@
       const copy = async () => {
         try {
           await navigator.clipboard.writeText(code.textContent);
-          note.textContent = `Copied ${code.textContent} — paste it into your address bar.`;
+          const hint = code.dataset.copyHint || 'Paste it into your address bar.';
+          note.textContent = `Copied ${code.textContent}. ${hint}`;
         } catch {
           note.textContent = 'Copy failed — select the text and copy it manually.';
         }

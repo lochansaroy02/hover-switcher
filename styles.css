@@ -813,6 +813,81 @@ h3 {
   text-align: center;
 }
 
+/* Install steps: get the code / load / update */
+.install-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 40px 0 16px;
+  font-size: 20px;
+}
+
+.install-step:first-of-type {
+  margin-top: 0;
+}
+
+.install-step .step-num {
+  flex-basis: 32px;
+  height: 32px;
+  font-size: 15px;
+}
+
+.get-code {
+  display: grid;
+  gap: 16px;
+  padding: 28px 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.get-code p {
+  margin: 0;
+}
+
+.get-code-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.get-code .get-code-actions {
+  justify-content: flex-start;
+}
+
+.clone {
+  margin: 0;
+  overflow-x: auto;
+}
+
+.clone code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.install-note {
+  margin: 16px 0 0;
+  font-size: 14px;
+}
+
+.update-text {
+  margin: 0;
+}
+
+.cta .btn-ghost {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.cta .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 /* FAQ */
 .faq {
   display: grid;
@@ -995,7 +1070,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .tab-panel {
+  .tab-panel,
+  .get-code {
     padding: 22px 20px;
   }
 
