@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YT Hover Account Switcher</title>
+  <meta name="description" content="Hover your YouTube avatar to see every signed-in account and switch with one click. A tiny, private browser extension for Chrome, Brave and Firefox.">
+  <meta name="theme-color" content="#ff0033">
+  <link rel="icon" type="image/png" href="assets/icon32.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="YT Hover Account Switcher home">
+        <img src="assets/icon32.png" alt="" width="28" height="28">
+        <span>Hover Switcher</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" data-theme-toggle>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Browser extension · Chrome · Brave · Firefox</p>
+          <h1>Switch YouTube accounts <span class="accent">with a hover.</span></h1>
+          <p class="lede">
+            Point at your avatar and every signed-in account is right there.
+            One click and you're on the other one, on the same video and at the same timestamp.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#install">Install it free</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+          <ul class="hero-points">
+            <li>No account data leaves your browser</li>
+            <li>No tracking, no dependencies</li>
+          </ul>
+        </div>
+
+        <!-- Interactive demo -->
+        <div class="demo" aria-label="Interactive demo">
+          <div class="demo-window">
+            <div class="demo-chrome" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <div class="demo-url">youtube.com/watch?v=…</div>
+            </div>
+            <div class="demo-masthead">
+              <div class="demo-logo" aria-hidden="true"><i></i><b></b></div>
+              <div class="demo-search" aria-hidden="true">Search</div>
+              <div class="demo-right">
+                <span class="demo-bell" aria-hidden="true"></span>
+                <button class="demo-avatar" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Account menu (demo)" data-demo-avatar>
+                  <span data-demo-avatar-letter>A</span>
+                </button>
+              </div>
+              <div class="demo-dropdown" role="menu" aria-label="Switch account" data-demo-dropdown hidden></div>
+            </div>
+            <div class="demo-body" data-demo-body>
+              <div class="demo-player"><span class="demo-play" aria-hidden="true"></span><span class="demo-time" data-demo-time>1:21 / 3:33</span></div>
+              <div class="demo-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="demo-toast" data-demo-toast hidden></div>
+            </div>
+          </div>
+          <p class="demo-hint"><span class="pulse" aria-hidden="true"></span> Try it: hover (or tap) the avatar</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <h2 class="section-title">Three clicks became one</h2>
+        <p class="section-sub">Normally it's avatar → Switch account → pick one. Now you hover and click.</p>
+        <div class="features">
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">⚡</div>
+            <h3>Instant list</h3>
+            <p>Accounts appear 150&nbsp;ms after you hover and are cached for five minutes, so repeat hovers don't send new requests.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">⏱️</div>
+            <h3>Keeps your place</h3>
+            <p>You stay on the same page, playlist and timestamp. Switching mid-video doesn't send you back to the start.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">🏷️</div>
+            <h3>Brand accounts too</h3>
+            <p>Personal accounts, work accounts and brand channels all show up in one list, grouped by Google account.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">🌗</div>
+            <h3>Looks native</h3>
+            <p>Matches YouTube's light and dark themes, with rounded corners, real avatars and a check on the active account.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">🖱️</div>
+            <h3>Click still works</h3>
+            <p>Clicking the avatar still opens YouTube's normal menu. The hover dropdown gets out of the way.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">🔒</div>
+            <h3>Private by design</h3>
+            <p>It only runs on youtube.com and only talks to youtube.com. There's no server and no analytics, and the code is small enough to read.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section-alt" id="how">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <div>
+              <h3>Hover</h3>
+              <p>The extension asks YouTube for the same account list its own menu uses, using the session you're already signed into.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <div>
+              <h3>Pick</h3>
+              <p>You see each account's name, handle, avatar and a check on the active one. Click any other account.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <div>
+              <h3>Switched</h3>
+              <p>YouTube's own switch runs behind the scenes, so the change sticks. The page reloads where you left off.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Install -->
+    <section class="section" id="install">
+      <div class="container narrow">
+        <h2 class="section-title">Install in under a minute</h2>
+        <p class="section-sub">Get the extension folder, then load it into your browser in developer mode.</p>
+
+        <div class="tabs" role="tablist" aria-label="Browser">
+          <button class="tab" role="tab" id="tab-chrome" aria-controls="panel-chrome" aria-selected="true" data-tab="chrome">Chrome / Brave</button>
+          <button class="tab" role="tab" id="tab-firefox" aria-controls="panel-firefox" aria-selected="false" tabindex="-1" data-tab="firefox">Firefox</button>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-chrome" aria-labelledby="tab-chrome" data-panel="chrome">
+          <ol class="install-list">
+            <li>Open <code class="copyable">chrome://extensions</code> (or <code class="copyable">brave://extensions</code>).</li>
+            <li>Turn on <strong>Developer mode</strong> in the top-right corner.</li>
+            <li>Click <strong>Load unpacked</strong> and choose the extension folder (the one containing <code>manifest.json</code>).</li>
+            <li>Reload any open YouTube tab and hover your avatar.</li>
+          </ol>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-firefox" aria-labelledby="tab-firefox" data-panel="firefox" hidden>
+          <ol class="install-list">
+            <li>Open <code class="copyable">about:debugging#/runtime/this-firefox</code>.</li>
+            <li>Click <strong>Load Temporary Add-on…</strong> and select <code>manifest.json</code>.</li>
+            <li>On Firefox older than 127, allow access: Extensions menu → Hover Switcher → <strong>Always allow on www.youtube.com</strong>.</li>
+            <li>Reload YouTube and hover your avatar. Temporary add-ons are removed when Firefox restarts.</li>
+          </ol>
+        </div>
+        <p class="copy-note" aria-live="polite" data-copy-note></p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container narrow">
+        <h2 class="section-title">Questions</h2>
+        <div class="faq">
+          <details class="reveal">
+            <summary>Does it see my password or send my data anywhere?</summary>
+            <p>No. It runs only on <code>www.youtube.com</code> and reads the account list YouTube already shows you, using your existing session. Nothing is sent to any other server.</p>
+          </details>
+          <details class="reveal">
+            <summary>Why does the page reload when I switch?</summary>
+            <p>That's how YouTube applies a new account. The extension brings you back to the same page and timestamp.</p>
+          </details>
+          <details class="reveal">
+            <summary>Could it stop working?</summary>
+            <p>Possibly. It relies on an undocumented YouTube endpoint, which YouTube can change at any time. If the list ever fails to load, the dropdown shows a retry button, and the console logs (prefixed <code>[YT-Switcher]</code>) show what went wrong.</p>
+          </details>
+          <details class="reveal">
+            <summary>Does it work on YouTube Music or Studio?</summary>
+            <p>Not yet. It runs only on the main <code>www.youtube.com</code> site and does nothing anywhere else.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-inner reveal">
+        <img src="assets/icon128.png" alt="" width="72" height="72">
+        <h2>Stop digging through menus.</h2>
+        <a class="btn btn-primary" href="#install">Get the extension</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span data-year></span> YT Hover Account Switcher</span>
+      <span class="muted">Not affiliated with or endorsed by YouTube or Google.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
