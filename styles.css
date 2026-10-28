@@ -813,7 +813,7 @@ h3 {
   text-align: center;
 }
 
-/* Install steps: get the code / load / update */
+/* Install steps inside each browser panel */
 .install-step {
   display: flex;
   align-items: center;
@@ -822,7 +822,7 @@ h3 {
   font-size: 20px;
 }
 
-.install-step:first-of-type {
+.tab-panel > .install-step:first-child {
   margin-top: 0;
 }
 
@@ -832,19 +832,6 @@ h3 {
   font-size: 15px;
 }
 
-.get-code {
-  display: grid;
-  gap: 16px;
-  padding: 28px 32px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
-}
-
-.get-code p {
-  margin: 0;
-}
-
 .get-code-actions {
   display: flex;
   flex-wrap: wrap;
@@ -852,8 +839,21 @@ h3 {
   gap: 12px;
 }
 
-.get-code .get-code-actions {
+.tab-panel .get-code-actions {
   justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.tab-panel > p:not(.install-note) {
+  margin: 0 0 16px;
+}
+
+.tab-panel > .clone {
+  margin-bottom: 16px;
+}
+
+.tab-panel > p:last-child {
+  margin-bottom: 0;
 }
 
 .clone {
@@ -1070,8 +1070,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .tab-panel,
-  .get-code {
+  .tab-panel {
     padding: 22px 20px;
   }
 

@@ -156,11 +156,15 @@
     <section class="section" id="install">
       <div class="container narrow">
         <h2 class="section-title">Install in under a minute</h2>
-        <p class="section-sub">Download the code from GitHub, then load it into your browser in developer mode.</p>
+        <p class="section-sub">Firefox installs from a file signed by Mozilla. Chrome and Brave load the code in developer mode.</p>
 
-        <h3 class="install-step"><span class="step-num">1</span> Get the code</h3>
-        <div class="get-code">
-          <p>The extension lives in the <a href="https://github.com/lochansaroy02/yt-account-switcher" target="_blank" rel="noopener">lochansaroy02/yt-account-switcher</a> repository on GitHub.</p>
+        <div class="tabs" role="tablist" aria-label="Browser">
+          <button class="tab" role="tab" id="tab-chrome" aria-controls="panel-chrome" aria-selected="true" data-tab="chrome">Chrome / Brave</button>
+          <button class="tab" role="tab" id="tab-firefox" aria-controls="panel-firefox" aria-selected="false" tabindex="-1" data-tab="firefox">Firefox</button>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-chrome" aria-labelledby="tab-chrome" data-panel="chrome">
+          <h3 class="install-step"><span class="step-num">1</span> Get the code</h3>
           <div class="get-code-actions">
             <a class="btn btn-primary" href="https://github.com/lochansaroy02/yt-account-switcher/archive/refs/heads/main.zip">Download ZIP</a>
             <a class="btn btn-ghost" href="https://github.com/lochansaroy02/yt-account-switcher" target="_blank" rel="noopener">View on GitHub</a>
@@ -168,15 +172,8 @@
           <p class="muted">Unzip it and you'll get a folder called <code>yt-account-switcher-main</code> with <code>manifest.json</code> inside. Or clone it with git:</p>
           <pre class="clone"><code class="copyable" data-copy-hint="Run it in a terminal.">git clone https://github.com/lochansaroy02/yt-account-switcher.git</code></pre>
           <p class="muted">Keep the folder somewhere permanent. The browser loads the extension from it, so deleting or moving it removes the extension.</p>
-        </div>
 
-        <h3 class="install-step"><span class="step-num">2</span> Load it in developer mode</h3>
-        <div class="tabs" role="tablist" aria-label="Browser">
-          <button class="tab" role="tab" id="tab-chrome" aria-controls="panel-chrome" aria-selected="true" data-tab="chrome">Chrome / Brave</button>
-          <button class="tab" role="tab" id="tab-firefox" aria-controls="panel-firefox" aria-selected="false" tabindex="-1" data-tab="firefox">Firefox</button>
-        </div>
-
-        <div class="tab-panel" role="tabpanel" id="panel-chrome" aria-labelledby="tab-chrome" data-panel="chrome">
+          <h3 class="install-step"><span class="step-num">2</span> Load it in developer mode</h3>
           <ol class="install-list">
             <li>Open <code class="copyable">chrome://extensions</code> (or <code class="copyable">brave://extensions</code>).</li>
             <li>Turn on <strong>Developer mode</strong> in the top-right corner.</li>
@@ -184,20 +181,28 @@
             <li>Reload any open YouTube tab and hover your avatar.</li>
           </ol>
           <p class="muted install-note">Chrome may warn about an unrecognized <code>browser_specific_settings</code> key. That key is only for Firefox, so you can ignore the warning.</p>
+
+          <h3 class="install-step"><span class="step-num">3</span> Updating</h3>
+          <p class="update-text">Download the new ZIP (or run <code>git pull</code> in the folder). Then click the reload icon on the extension's card in <code>chrome://extensions</code> and reload YouTube.</p>
         </div>
 
         <div class="tab-panel" role="tabpanel" id="panel-firefox" aria-labelledby="tab-firefox" data-panel="firefox" hidden>
+          <div class="get-code-actions">
+            <a class="btn btn-primary" href="https://github.com/lochansaroy02/yt-account-switcher/releases/download/v1.0.0/hover-switcher-1.0.0.xpi">Install for Firefox</a>
+            <a class="btn btn-ghost" href="https://github.com/lochansaroy02/yt-account-switcher/releases/latest" target="_blank" rel="noopener">All releases</a>
+          </div>
           <ol class="install-list">
-            <li>Open <code class="copyable">about:debugging#/runtime/this-firefox</code>.</li>
-            <li>Click <strong>Load Temporary Add-on…</strong> and select <code>manifest.json</code> inside the downloaded folder.</li>
+            <li>Click <strong>Install for Firefox</strong>. If Firefox asks to allow the install from github.com, click <strong>Continue to Installation</strong>. If it just downloads the file, open <code>hover-switcher-1.0.0.xpi</code> from the downloads list or drag it onto a Firefox window.</li>
+            <li>Click <strong>Add</strong> when Firefox asks.</li>
             <li>On Firefox older than 127, allow access: Extensions menu → Hover Switcher → <strong>Always allow on www.youtube.com</strong>.</li>
-            <li>Reload YouTube and hover your avatar. Temporary add-ons are removed when Firefox restarts.</li>
+            <li>Reload YouTube and hover your avatar.</li>
           </ol>
+          <p class="muted install-note">The add-on is signed by Mozilla, so it stays installed after Firefox restarts. Version 1.0.0, Firefox 109 or newer.</p>
+
+          <h3 class="install-step">Updating</h3>
+          <p class="update-text">Download the newest <code>.xpi</code> from the <a href="https://github.com/lochansaroy02/yt-account-switcher/releases/latest" target="_blank" rel="noopener">releases page</a> and open it the same way. Firefox replaces the old version and keeps your settings.</p>
         </div>
         <p class="copy-note" aria-live="polite" data-copy-note></p>
-
-        <h3 class="install-step"><span class="step-num">3</span> Updating</h3>
-        <p class="update-text">Download the new ZIP (or run <code>git pull</code> in the folder). Then click the reload icon on the extension's card in <code>chrome://extensions</code> and reload YouTube. In Firefox, load the temporary add-on again.</p>
       </div>
     </section>
 
